@@ -1,14 +1,14 @@
 import java.util.*;
 
 public class SumZeroSubarray {
-    public static void main(String[] args){
-        Scanner sc=new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
         //Take user input for array size and array elements
-        int n=sc.nextInt();
-        int[] arr=new int[n];
-        for(int i=0;i<n;i++){
-            arr[i]=sc.nextInt();
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
         }
 
         //make a call to method sol to get the list of desired result
