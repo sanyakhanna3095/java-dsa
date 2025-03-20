@@ -11,13 +11,8 @@ public class SumZeroSubarray {
             arr[i]=sc.nextInt();
         }
 
-        //make a call to method sol to get the list of desired subarrays and store the result
-        List<int[]> res=sol(arr);
-
-        //Print the resulting List
-        for(int[] sub: res){
-            System.out.println(Arrays.toString(sub));
-        }
+        //make a call to method sol to get the list of desired result
+        sol(arr);
     }
 
     public static List<int[]> sol(int[] arr){
