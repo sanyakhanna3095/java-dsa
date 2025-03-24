@@ -2,9 +2,14 @@ import java.util.Scanner;
 
 class CircularTour {
     public static int findStartingPump(int[] petrol, int[] distance) {
-        int totalSurplus = 0; // Total net petrol in journey
-        int currentSurplus = 0; // Petrol balance at each step
-        int start = 0; // Possible starting pump
+        // Total net petrol in journey
+        int totalSurplus = 0;
+
+        // Petrol balance at each step
+        int currentSurplus = 0;
+
+        // Possible starting pump
+        int start = 0;
 
         for (int i = 0; i < petrol.length; i++) {
             int netPetrol = petrol[i] - distance[i];
@@ -18,7 +23,8 @@ class CircularTour {
             }
         }
 
-        return (totalSurplus >= 0) ? start : -1; // If journey is possible, return start index
+        // If journey is possible, return start index
+        return (totalSurplus >= 0) ? start : -1;
     }
 
     public static void main(String[] args) {
@@ -37,7 +43,8 @@ class CircularTour {
         int startIndex = findStartingPump(petrol, distance);
         if (startIndex == -1) {
             System.out.println("No valid starting point exists.");
-        } else {
+        }
+        else {
             System.out.println("Start at petrol pump index: " + startIndex);
         }
     }
