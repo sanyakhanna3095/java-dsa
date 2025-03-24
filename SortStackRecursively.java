@@ -19,16 +19,18 @@ public class SortStackRecursively {
     private static void insertSorted(Stack<Integer> stack, int element) {
         if (stack.isEmpty() || stack.peek() <= element) {
             stack.push(element);
-        } else {
+        }
+        else {
             int top = stack.pop();
             insertSorted(stack, element);
             stack.push(top);
         }
     }
 
-    // Driver code to test the sorting function
     public static void main(String[] args) {
         Stack<Integer> stack = new Stack<>();
+
+        //Use test numbers
         stack.push(3);
         stack.push(1);
         stack.push(4);
@@ -37,6 +39,7 @@ public class SortStackRecursively {
 
         System.out.println("Original Stack: " + stack);
 
+        //make a call to a function that sorts the stack
         sortStack(stack);
 
         System.out.println("Sorted Stack: " + stack);
